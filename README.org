@@ -1,0 +1,20 @@
+* Docker build of erldns
+  This repository builds a Docker container hosting an erldns
+  instance.
+
+** Run It
+   Assuming you have Docker installed, you may try out this image
+   immediately:
+   #+BEGIN_SRC sh
+     docker run -it --rm stoo/erldns
+   #+END_SRC
+
+** Build It
+   Run the following to create the images:
+   #+BEGIN_SRC sh
+     make
+   #+END_SRC
+
+** Dependencies
+   - GNU Make
+   - Docker
