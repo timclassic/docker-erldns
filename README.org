@@ -6,7 +6,12 @@
    Assuming you have Docker installed, you may try out this image
    immediately:
    #+BEGIN_SRC sh
-     docker run -it --rm stoo/erldns
+     docker run -d --name=dns_container \
+      -v /path/to/configs/etc:/etc/opt/erldns \
+      -v /path/to/var:/var/opt/erldns \
+      -p pub.lic.ipa.ddr:8053/tcp \
+      -p pub.lic.ipa.ddr:53:8053/udp \
+      stoo/erldns:1.0
    #+END_SRC
 
 ** Build It
